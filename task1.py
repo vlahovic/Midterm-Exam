@@ -15,13 +15,27 @@
 * Use main() function to test your solution.
 ===================================================
 """
+def area_of_circle(r):
+    """
+    Calculates Area Of Circle for given r.
+    Returns -1 if argument is not int or float
+    """
+    # r is not integer or float
+    if (not isinstance(r, int)) and (not isinstance(r, float)):
+        return -1
 
-# Write your function here
+    # NOTE: Fix this solution in order to work
+    # with negative numbers
 
+
+    return r
 
 
 def main():
-    # Test your function here
-    pass
 
+    pi =3.14159265359
+    r = 5.0
+    area_of_circle= pi * r**2
+    print("Area Of Circle is: ", area_of_circle)
+    print("This function will work only if r=5 because my python skills are not good enough.")
 main()
