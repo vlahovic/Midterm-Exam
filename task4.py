@@ -13,13 +13,17 @@
 * Use main() function to test your solution.
 ===================================================
 """
-
-# Write your function here
-
-
-
+def convert_2_upper(recenica):
+    g = ""
+    for ch in recenica:
+        if ord(ch) >= 97 and ord(ch) <= 122:
+            x = ord(ch) - 32
+            y = chr(x)
+            g = g + y
+    return g
 def main():
-    # Test your function here
-    pass
+    recenica = input('Enter here: ')
+    print(convert_2_upper(recenica))
+
 
 main()
