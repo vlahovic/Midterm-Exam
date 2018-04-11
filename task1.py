@@ -15,27 +15,21 @@
 * Use main() function to test your solution.
 ===================================================
 """
+import math
+
 def area_of_circle(r):
-    """
-    Calculates Area Of Circle for given r.
-    Returns -1 if argument is not int or float
-    """
-    # r is not integer or float
-    if (not isinstance(r, int)) and (not isinstance(r, float)):
-        return -1
 
-    # NOTE: Fix this solution in order to work
-    # with negative numbers
+    if not isinstance(r, float) and not isinstance(r, int): # unijeti broj mora biti cijeli ili decimalni, pa to ispitujemo,
+        return -1                                           # a ako nije vratice -1
 
-
-    return r
+    return (abs(r)**2)*math.pi  #f-ja vraca povrsinu kruga datog poluprecnika
 
 
 def main():
 
-    pi =3.14159265359
-    r = 5.0
-    area_of_circle= pi * r**2
-    print("Area Of Circle is: ", area_of_circle)
-    print("This function will work only if r=5 because my python skills are not good enough.")
+    povrsina = area_of_circle(-2.3)
+    print(povrsina)
+
+    pass
+
 main()

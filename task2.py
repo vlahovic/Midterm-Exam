@@ -12,4 +12,22 @@
 ===================================================
 """
 
-# Write your code here
+broj = eval(input("Unesi cijeli broj: ")) # eval procjenjuje sta je korisnik unio
+
+if not isinstance(broj,int): # ispitujemo da li je unijet cijeli broj
+    print("Pogresan unos!")
+    quit()
+
+proizvod = 1
+
+for i in str(abs(broj)): # prolazi kroz cifre datog broja(ali apsolutnog, zbog minusa)
+
+    proizvod *= int(i) #mnozi sve cifre datog broja
+
+
+if broj < 0: # ako je broj negativan proizvod cifri ce mu takodje biti negativan, pa zato dobijeni proizv mnozimo na kraju sa -1
+
+    print("Proizvod cifri datog broja je: ", (-1) * proizvod)
+
+else:
+    print("Proizvod cifri datog broja je: ", proizvod)
